@@ -25,6 +25,7 @@ import sys
 import controller
 from DISClib.ADT import list as lt
 assert cf
+from DISClib.ADT import map as mp
 
 
 """
@@ -141,6 +142,11 @@ while True:
         print('Libros cargados: ' + str(controller.booksSize(cont)))
         print('Autores cargados: ' + str(controller.authorsSize(cont)))
         print('Géneros cargados: ' + str(controller.tagsSize(cont)))
+        print(mp.size(cont["bookIds"]))
+        print(mp.size(cont["authors"]))
+        print(mp.size(cont["tags"]))
+        print(mp.size(cont["tagIds"]))
+        print(mp.size(cont["years"]))
 
     elif int(inputs[0]) == 3:
         number = input("Buscando libros del año?: ")
